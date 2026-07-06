@@ -10,17 +10,43 @@ body {
 }
 
 main {
-    max-width: 720px;
-    margin: 6rem auto;
+    max-width: 760px;
+    margin: 8rem auto;
     padding: 0 2rem;
 }
 
+.eyebrow {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #666;
+}
+
 h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1;
+    margin: 0 0 1.5rem;
+}
+
+.lede {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    max-width: 640px;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid #222;
+    border-radius: 999px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
 }
