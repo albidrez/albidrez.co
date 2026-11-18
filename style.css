@@ -129,3 +129,10 @@ footer { border-top: 1px solid var(--line); padding: 1.5rem 0 3rem; color: #777;
   .step-item { width: 100%; }
   .step-detail summary { min-height: 0; }
 }
+
+/* Closed cards must never show their body, even on hover. */
+.step-detail:not([open]) > .step-popup { display: none !important; }
+.step-detail[open] > .step-popup { display: block; }
+.step-item:not(:has(.step-detail[open])) { flex-grow: 1; }
+.step-item:not(:has(.step-detail[open])) .step-detail { height: auto; }
+.step-item:not(:has(.step-detail[open])) summary { min-height: 0; }
