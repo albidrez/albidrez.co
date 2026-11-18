@@ -20,7 +20,7 @@ p { line-height: 1.6; }
 .button-primary:hover, .button-primary:focus-visible { background: #411466; }
 .availability { margin-top: 1.3rem; font-size: .87rem; color: var(--muted); }
 .scroll-cue { display: inline-flex; align-items: center; gap: .8rem; margin-top: 1.2rem; margin-left: 1.5rem; color: var(--purple); text-decoration: none; font-size: .88rem; font-weight: 600; }
-.scroll-arrow { display: inline-flex; align-items: center; justify-content: center; width: 2.8rem; height: 2.8rem; border: 2px solid var(--purple); border-radius: 50%; color: var(--purple); font-size: 2rem; font-weight: 600; transition: transform .15s; }
+.scroll-arrow { display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; color: var(--purple); font-size: 1.5rem; font-weight: 500; transition: transform .15s; }
 .scroll-cue:hover, .scroll-cue:focus-visible { color: var(--purple); }
 .scroll-cue:hover .scroll-arrow, .scroll-cue:focus-visible .scroll-arrow { transform: translateY(3px); }
 #approach { scroll-margin-top: 1.5rem; }
