@@ -117,3 +117,15 @@ footer { border-top: 1px solid var(--line); padding: 1.5rem 0 3rem; color: #777;
   .step-popup, .step-item:nth-child(n+4) .step-popup { padding: 0 1rem 1rem; margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .step-item { transition: none; } }
+
+/* Compact closed cards; let the active card grow vertically as well as horizontally. */
+.steps { align-items: flex-start; }
+.step-item { align-self: flex-start; }
+.step-detail { height: auto; }
+.step-detail summary { min-height: 0; padding: .85rem .9rem; gap: .45rem; }
+.step-hint { margin-top: .2rem; }
+.step-detail[open] summary { padding-bottom: .7rem; }
+@media (max-width: 720px) {
+  .step-item { width: 100%; }
+  .step-detail summary { min-height: 0; }
+}
