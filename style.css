@@ -45,6 +45,8 @@ p { line-height: 1.6; }
 .popup-index { color: var(--purple); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .popup-visual { display: flex; align-items: center; justify-content: space-between; gap: .25rem; margin: 1rem 0; }
 .popup-visual span:not(.visual-arrow) { flex: 1; min-width: 0; padding: .7rem .25rem; border: 1px solid #dfd3e9; border-radius: 6px; background: #f8f4fb; color: #49206e; text-align: center; font-size: .68rem; font-weight: 650; }
+.decision-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+.decision-grid span { padding: .7rem .25rem; border: 1px solid #dfd3e9; border-radius: 6px; background: #f8f4fb; color: #49206e; text-align: center; font-size: .72rem; font-weight: 650; }
 .popup-visual .visual-arrow { color: var(--purple); font-size: 1rem; }
 .step-popup h3 { font-size: 1.03rem; margin: 0 0 .5rem; letter-spacing: -.02em; }
 .step-popup p { font-size: .87rem; line-height: 1.5; margin: 0; color: #555; }
