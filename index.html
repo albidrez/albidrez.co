@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Practical operational engineering for owner-operated businesses. Find bottlenecks, simplify workflows, and use technology where it helps.">
   <title>Operational Engineering | Patricia Albidrez</title>
-  <link rel="stylesheet" href="style.css?v=20261118-2">
+  <link rel="stylesheet" href="style.css?v=20261118-3">
 </head>
 <body>
   <div class="site-shell">
@@ -26,12 +26,13 @@
       <section id="approach" class="section approach" aria-labelledby="approach-title">
         <p class="section-index">01 / The approach</p>
         <h2 id="approach-title">Start with the work.<br>Not the software.</h2>
+        <p class="steps-instruction">Hover or tap a step to see what it looks like.</p>
         <ol class="steps" aria-label="Five-step engineering approach">
-          <li><span class="number">01</span><strong>Discover</strong></li>
-          <li><span class="number">02</span><strong>Map</strong></li>
-          <li><span class="number">03</span><strong>Simplify</strong></li>
-          <li><span class="number">04</span><strong>Build</strong></li>
-          <li><span class="number">05</span><strong>Refine</strong></li>
+          <li class="step-item"><details class="step-detail"><summary><span class="number">01</span><strong>Discover</strong><span class="step-hint" aria-hidden="true">+</span></summary><div class="step-popup"><span class="popup-index">01 / Discover</span><div class="popup-visual" aria-hidden="true"><span>Questions</span><span class="visual-arrow">→</span><span>Observation</span><span class="visual-arrow">→</span><span>Friction</span></div><h3>Listen and observe</h3><p>We talk with the people doing the work and look for delays, rework, and missed opportunities.</p></div></details></li>
+          <li class="step-item"><details class="step-detail"><summary><span class="number">02</span><strong>Map</strong><span class="step-hint" aria-hidden="true">+</span></summary><div class="step-popup"><span class="popup-index">02 / Map</span><div class="popup-visual" aria-hidden="true"><span>Inquiry</span><span class="visual-arrow">→</span><span>Order</span><span class="visual-arrow">→</span><span>Payment</span></div><h3>See how work moves</h3><p>We trace an actual customer journey, from first contact through service and payment.</p></div></details></li>
+          <li class="step-item"><details class="step-detail"><summary><span class="number">03</span><strong>Simplify</strong><span class="step-hint" aria-hidden="true">+</span></summary><div class="step-popup"><span class="popup-index">03 / Simplify</span><div class="popup-visual" aria-hidden="true"><span>5 steps</span><span class="visual-arrow">→</span><span>Remove waste</span><span class="visual-arrow">→</span><span>3 steps</span></div><h3>Make the process lighter</h3><p>We remove duplicate entry, unnecessary approvals, and confusing handoffs before adding software.</p></div></details></li>
+          <li class="step-item"><details class="step-detail"><summary><span class="number">04</span><strong>Build</strong><span class="step-hint" aria-hidden="true">+</span></summary><div class="step-popup"><span class="popup-index">04 / Build</span><div class="popup-visual" aria-hidden="true"><span>Order</span><span class="visual-arrow">→</span><span>Automatic</span><span class="visual-arrow">→</span><span>Kitchen</span></div><h3>Make the fix real</h3><p>We connect existing tools or create a small automation—for example, sending orders straight to the kitchen.</p></div></details></li>
+          <li class="step-item"><details class="step-detail"><summary><span class="number">05</span><strong>Refine</strong><span class="step-hint" aria-hidden="true">+</span></summary><div class="step-popup"><span class="popup-index">05 / Refine</span><div class="popup-visual" aria-hidden="true"><span>Baseline</span><span class="visual-arrow">→</span><span>Measure</span><span class="visual-arrow">→</span><span>Improve</span></div><h3>Check the results</h3><p>We measure what changed, ask what's still frustrating, and adjust until the improvement sticks.</p></div></details></li>
         </ol>
         <p class="outcome"><span aria-hidden="true">→</span> Revenue. Efficiency. Better margins.</p>
       </section>
@@ -61,5 +62,18 @@
     </main>
     <footer><span>Patricia Albidrez · Operational Engineering</span></footer>
   </div>
+  <script>
+    document.querySelectorAll('.step-detail').forEach((detail) => {
+      detail.addEventListener('toggle', () => {
+        if (detail.open) document.querySelectorAll('.step-detail[open]').forEach((other) => { if (other !== detail) other.open = false; });
+      });
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') document.querySelectorAll('.step-detail[open]').forEach((detail) => { detail.open = false; });
+    });
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.step-detail')) document.querySelectorAll('.step-detail[open]').forEach((detail) => { detail.open = false; });
+    });
+  </script>
 </body>
 </html>
