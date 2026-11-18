@@ -61,9 +61,10 @@
         <a class="button button-light" href="https://calendar.app.google/zFF1YuV7bFLgazE49" target="_blank" rel="noopener noreferrer">Book a discovery call <span aria-hidden="true">↗</span></a>
       </section>
     </main>
-    <footer><span>Patricia Albidrez · Operational Engineering</span></footer>
+    <footer><span>Patricia Albidrez · Operational Engineering</span><span>© <span id="copyright-year">2026</span> Patricia Albidrez. All rights reserved.</span></footer>
   </div>
   <script>
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
     const steps = document.querySelectorAll('.step-detail');
     steps.forEach((detail) => {
       detail.addEventListener('toggle', () => {
