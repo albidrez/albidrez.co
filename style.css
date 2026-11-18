@@ -95,10 +95,11 @@ footer { border-top: 1px solid var(--line); padding: 1.5rem 0 3rem; color: #777;
 }
 @media (prefers-reduced-motion:reduce) { .step-item { transition:none; } }
 
-/* Keep inactive cards at a fixed compact height regardless of expanded neighbor. */
-.steps > .step-item { align-self:flex-start; height:max-content; }
-.steps > .step-item > .step-detail:not([open]) { height:108px; max-height:108px; }
-.steps > .step-item > .step-detail[open] { height:auto; max-height:none; }
-@media (max-width:720px) {
-  .steps > .step-item > .step-detail:not([open]) { height:auto; max-height:none; }
-}
+
+/* Independent heights: a card never inherits the height of its open neighbor. */
+.steps { align-items:flex-start; }
+.steps > .step-item { align-self:flex-start; height:fit-content; }
+.steps > .step-item > .step-detail { height:fit-content; min-height:0; }
+.steps > .step-item > .step-detail:not([open]) { height:fit-content; }
+.steps > .step-item > .step-detail:not([open]) > .step-popup { display:none; }
+@media (max-width:720px) { .steps > .step-item { height:auto; } }
