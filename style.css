@@ -620,3 +620,17 @@ details[open] .fg-step-indicator::before { content: "−"; }
 @media (min-width: 761px) {
   .fg-desktop-steps:not([hidden]) + .fg-mobile-steps { display: none; }
 }
+
+/* Ops Mechanic illustration: modest on desktop, below steps on mobile. */
+.fg-section-heading { grid-template-columns: minmax(135px,.45fr) minmax(0,1.5fr) minmax(230px,1fr); gap: 28px; align-items: center; }
+.fg-approach-art { margin: 0; align-self: center; }
+.fg-approach-art img { display: block; width: 100%; height: auto; border-radius: 8px; }
+@media (max-width: 760px) {
+  .fg-section-heading { display: contents; }
+  .fg-approach { display: flex; flex-direction: column; }
+  .fg-section-index { order: 0; }
+  .fg-heading-copy { order: 1; margin-top: 20px; }
+  .fg-workbench { order: 2; }
+  .fg-approach-art { order: 3; width: min(100%, 440px); margin: 28px auto 0; }
+  .fg-outcome { order: 4; }
+}
